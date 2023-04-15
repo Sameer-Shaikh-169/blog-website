@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main class="form-container">
+        <form id="blog-post" action="/blogs" method="POST">
+            <label>Blog Title</label>
+            <input id="blog-title" name="title" type="text" placeholder="Type here..." required>
+
+            <label>Blog Snippet</label>
+            <input id="blog-snippet" name="snippet" type="text" placeholder="Type here..." required>
+
+            <label>Blog Body</label>
+            <textarea id="blog-body" name="body" placeholder="Type here..." required></textarea>
+
+            <div class="button">
+                <button id="proceedBtn" href="javascript:getElementById('blog-post').submit();">
+                    <span class="hover">Hover Here</span>
+                    <span class="change">Proceed</span>
+                </button>
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
